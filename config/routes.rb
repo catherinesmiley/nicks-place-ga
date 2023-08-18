@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sub_menus
   resources :menu_meals
   resources :meals
   resources :menus
