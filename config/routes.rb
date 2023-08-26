@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'hours_location', to: 'info#hours_location'
   resources :events
   root 'home#index'
   get 'home/index'
