@@ -1,0 +1,2 @@
+class SideOptionsController < ApplicationController
+end
