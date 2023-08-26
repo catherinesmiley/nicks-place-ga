@@ -8,7 +8,7 @@
     <% sub_menu.meals.each do |meal| %> <!-- Assuming you've set up a relation between SubMenu and Meal -->
       <p><%= meal.name %></p>
       <p><%= meal.description %></p>
-      <p><%= meal.price %></p>
+      <p>$<%= meal.formatted_price %></p>
     <% end %>
   <% end %>
 <% else %>
@@ -16,6 +16,6 @@
   <% @meals.each do |meal| %>
     <p><%= meal.name %></p>
     <p><%= meal.description %></p>
-    <p><%= meal.price %></p>
+    <p>$<%= meal.formatted_price %></p>
   <% end %>
 <% end %>
