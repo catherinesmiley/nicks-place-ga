@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'home#index'
+  get 'home/index'
   resources :sub_menus
   resources :menu_meals
   resources :meals

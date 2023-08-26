@@ -1,9 +1,21 @@
 <h2><%= @menu.title %></h2>
 <h3><%= @menu.description %></h3>
 
-<h3>Meals:</h3>
-<% @meals.each do |meal| %>
-  <p><%= meal.name %></p>
-  <p><%= meal.description %></p>
-  <p><%= meal.price %></p>
+<% if @menu.sub_menus.any? %>
+  <% @menu.sub_menus.each do |sub_menu| %>
+    <h4><%= sub_menu.name %></h4> <!-- Assuming your SubMenu has a name -->
+
+    <% sub_menu.meals.each do |meal| %> <!-- Assuming you've set up a relation between SubMenu and Meal -->
+      <p><%= meal.name %></p>
+      <p><%= meal.description %></p>
+      <p><%= meal.price %></p>
+    <% end %>
+  <% end %>
+<% else %>
+  <h3>Meals:</h3>
+  <% @meals.each do |meal| %>
+    <p><%= meal.name %></p>
+    <p><%= meal.description %></p>
+    <p><%= meal.price %></p>
+  <% end %>
 <% end %>
