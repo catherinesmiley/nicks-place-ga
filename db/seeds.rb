@@ -35,3 +35,15 @@ MenuMeal.find_or_create_by(menu: lunch_dinner_menu, meal: grilled_chicken_sandwi
 salads.meals << chef_salad 
 baskets_and_plates.meals << fried_chicken_finger_basket
 sandwiches_and_burgers.meals << grilled_chicken_sandwich
+
+specials = [
+    { name: 'Cheeseburger', price: 8.00, day_of_week: 'Monday' },
+    { name: 'Pork Chop', price: 8.50, choice: 'fried or grilled', day_of_week: 'Tuesday' },
+    { name: 'Pork Ribs', price: 8.50, day_of_week: 'Wednesday' },
+    { name: 'Meatloaf', price: 8.00, day_of_week: 'Thursday' },
+    { name: 'Hamburger Steak', price: 8.00, day_of_week: 'Friday' }
+]
+
+specials.each do |special_data|
+    Special.find_or_create_by(special_data)
+  end
