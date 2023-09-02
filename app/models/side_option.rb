@@ -1,3 +1,4 @@
 class SideOption < ApplicationRecord
-  belongs_to :special
+  has_many :side_options_specials
+  has_many :specials, through: :side_options_specials
 end
