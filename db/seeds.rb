@@ -47,7 +47,7 @@ def create_menus
     specials = [
         { name: 'Cheeseburger', price: 8.00, day_of_week: 'Monday' },
         { name: 'Pork Chop', price: 8.50, choice: 'fried or grilled', day_of_week: 'Tuesday' },
-        { name: 'Hamburger Steak', price: 8.00, choice: day_of_week: 'Wednesday' },
+        { name: 'Hamburger Steak', price: 8.00, day_of_week: 'Wednesday' },
         { name: 'Meatloaf', price: 8.00, day_of_week: 'Thursday' },
         { name: 'Ribs', price: 8.50, day_of_week: 'Friday' }
     ]
