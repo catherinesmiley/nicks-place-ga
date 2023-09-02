@@ -8,7 +8,7 @@
 
 def create_menus
     @breakfast_menu = Menu.find_or_create_by(title: "Breakfast", description: "8:00-10:45 AM Fridays & 9:00-10:45 AM Saturdays")
-    @lunch_dinner_menu = Menu.find_or_create_by(title: "Lunch/Dinner", description: "Hearty meals to fill you up any time of the day!")
+    @lunch_dinner_menu = Menu.find_or_create_by(title: "Lunch/Dinner")
   end
   
   def create_sub_menus
