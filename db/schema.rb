@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_02_162317) do
+ActiveRecord::Schema.define(version: 2023_09_02_195733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,10 +50,8 @@ ActiveRecord::Schema.define(version: 2023_09_02_162317) do
 
   create_table "side_options", force: :cascade do |t|
     t.string "name"
-    t.bigint "special_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["special_id"], name: "index_side_options_on_special_id"
   end
 
   create_table "side_options_specials", force: :cascade do |t|
@@ -84,7 +82,6 @@ ActiveRecord::Schema.define(version: 2023_09_02_162317) do
 
   add_foreign_key "menu_meals", "meals"
   add_foreign_key "menu_meals", "menus"
-  add_foreign_key "side_options", "specials"
   add_foreign_key "side_options_specials", "side_options"
   add_foreign_key "side_options_specials", "specials"
   add_foreign_key "sub_menus", "menus"

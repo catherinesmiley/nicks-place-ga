@@ -21,22 +21,23 @@ def create_menus
     @sub_menus = {}
   
     sub_menu_names.each do |name|
-        @sub_menus[name.downcase.gsub(' ', '_').to_sym] = SubMenu.find_or_create_by(name: name, menu: @lunch_dinner_menu)
+        @sub_menus[name.downcase.gsub(' & ', '_and_').gsub(' ', '_').to_sym] = SubMenu.find_or_create_by(name: name, menu: @lunch_dinner_menu)
     end 
-  end
-  
-  def create_meals
+end
+
+def create_meals
     meals_data = [
       {name: "Chef Salad", description: "Mixed Greens, Ham, Tomato, Hardboiled Egg, Cucumber & Cheese", price: 9, sub_menu: :salads},
-      {name: "Fried Chicken Finger Basket", description: "Served with Mac & Cheese, Green Beans, of Fries", price: 7.50, sub_menu: :baskets_and_plates},
-      {name: "Grilled Chicken Sandwich", description: "Served on a Bun with Mayo, Lettuce & Tomato", price: 8.50}
+      {name: "Fried Chicken Finger Basket", description: "Served with Mac & Cheese, Green Beans, or Fries", price: 7.50, sub_menu: :baskets_and_plates},
+      {name: "Grilled Chicken Sandwich", description: "Served on a Bun with Mayo, Lettuce & Tomato", price: 8.50, sub_menu: :sandwiches_and_burgers}
     ]
   
     meals_data.each do |meal_data|
       meal = Meal.find_or_create_by(name: meal_data[:name], description: meal_data[:description], price: meal_data[:price])
       @sub_menus[meal_data[:sub_menu]].meals << meal
     end
-  end
+end
+
   
   def create_side_options
     weekly_sides = ['Fries', 'Coleslaw', 'Mashed Potatoes']
