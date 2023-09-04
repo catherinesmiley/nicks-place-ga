@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= render 'shared/navbar' %>
-    <title>AppName</title>
+    <title>Nick's Place</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,6 +13,12 @@
   </head>
 
   <body>
+    <header class="header">
+      <%= image_tag 'logo.jpg', alt: 'logo', class: 'header-logo' %>
+      <%= render 'shared/navbar' %>
+      </nav>
+    </header>
+
     <%= yield %>
   </body>
 </html>

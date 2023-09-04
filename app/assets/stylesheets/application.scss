@@ -14,8 +14,19 @@
  *= require_self
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
- body {
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header-logo {
+    width: 100px;
+}
+
+body {
     font-family: 'Poiret One', cursive;
   }
