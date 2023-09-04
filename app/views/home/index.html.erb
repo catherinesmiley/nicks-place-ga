@@ -1,2 +1,9 @@
 <h1>Nick's Place</h1>
 <p>It's in Georgia</p>
+
+<% if @today_special %>
+  <h2>Today's Special</h2>
+  <p><%= @today_special.name %> - <%= number_to_currency(@today_special.price) %></p>
+<% else %>
+  <p>Sorry, no specials today!</p>
+<% end %>
