@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :side_options
   resources :specials
   get 'hours_location', to: 'info#hours_location'
+  get 'about', to: 'info#about'
   resources :events
   root 'home#index'
   get 'home/index'
