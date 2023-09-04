@@ -1,5 +1,7 @@
 <h2>Upcoming Events</h2>
 
 <% @events.each do |event| %>
-    <p> <%= event.title %> <p>
+    <h2> <%= event.title %> <h2>
+    <h3> <%= event.date.strftime('%-m/%-d/%y') %> </h3>
+    <h3> <%= event.time.strftime('%-l:%M %p') %> </h3>
 <% end %>
