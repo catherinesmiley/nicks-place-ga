@@ -3,7 +3,13 @@
 
 <% if @today_special %>
   <h2>Today's Special</h2>
-  <p><%= @today_special.name %> - <%= number_to_currency(@today_special.price) %></p>
+  <h3><%= @today_special.name %> - <%= number_to_currency(@today_special.price) %></h3>
+  <p>Served with cornbread or toast, a drink, and choice of 2 sides.</p>
+  <p>Sides: 
+    <% @today_special.side_options.each do |side_option| %>
+        <%= side_option.name %><%= ',' unless side_option == @today_special.side_options.last %>
+    <% end %>
+  </p>
 <% else %>
   <p>Sorry, no specials today!</p>
 <% end %>

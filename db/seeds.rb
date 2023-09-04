@@ -55,7 +55,18 @@ end
     
     specials.each do |special_data|
         special = Special.find_or_create_by(special_data)
-        special.side_options << @side_option_records
+        special.side_options = @side_option_records
+    end
+  end
+
+  def create_events
+    events = [
+        { name: "First of the Month Dinner", date: Date.new(2023, 9, 4), time: Time.parse('19:00:00') },
+        { name: "Bonus Monthly Dinner", date: Date.new(2023, 9, 11), time: Time.parse('19:00:00') }
+    ]
+  
+    @all_events = events.map do |event|
+      Event.find_or_create_by(title: event[:name], date: event[:date], time: event[:time])
     end
   end
   
@@ -64,4 +75,5 @@ end
   create_meals
   create_side_options
   create_specials
+  create_events
   
