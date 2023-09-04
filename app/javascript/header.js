@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('turbolinks:load', function() {
     const header = document.querySelector('.header');
     window.addEventListener('scroll', function() {
       if (window.scrollY > 50) { 
@@ -9,5 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         header.classList.add('initial-state');
       }
     });
-  });
+});
+
   

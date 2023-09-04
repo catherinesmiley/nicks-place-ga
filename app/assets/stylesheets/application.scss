@@ -34,14 +34,19 @@
   }
 
 .header.initial-state .header-nav {
-    text-align: center;
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-nav .nav-link {
+    text-align: center;
+    margin: 5px;
+}
+
+.header.initial-state .nav-link {
     margin: 0 auto;
-    padding: 10px;
     display: block;
 }
 
@@ -63,6 +68,7 @@
 .header-nav {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 .nav-link {
