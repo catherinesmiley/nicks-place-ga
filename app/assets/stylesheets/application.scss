@@ -28,17 +28,21 @@
 }
 
 .header.initial-state .header-logo {
-    width: 200px;
+    width: 400px;
     margin: 0 auto;
     display: block;
   }
 
 .header.initial-state .header-nav {
     text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .header-nav .nav-link {
-    margin: 0 15px; 
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
 }
 
 .header.scrolled-state {
@@ -54,10 +58,6 @@
 .header.scrolled-state .header-nav {
     display: inline-block;
     vertical-align: top;
-}
-
-.header-logo {
-    width: 100px;
 }
 
 .header-nav {
@@ -80,4 +80,5 @@
 
 body {
     font-family: 'Poiret One', cursive;
+    padding-top: 500px;
   }
