@@ -12,13 +12,16 @@
     
   </head>
 
-  <body>
-    <header class="header">
-      <%= image_tag 'logo.jpg', alt: 'logo', class: 'header-logo' %>
-      <%= render 'shared/navbar' %>
-      </nav>
-    </header>
+    <body>
+      <header class="header initial-state">
+        <div class="header-content">
+          <%= image_tag 'logo.jpg', alt: 'logo', class: 'header-logo' %>
+          <nav class="header-nav">
+            <%= render 'shared/navbar' %>
+          </nav>
+        </div>
+      </header>
 
-    <%= yield %>
+      <%= yield %>
   </body>
 </html>
